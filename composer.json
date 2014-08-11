@@ -1,0 +1,19 @@
+{
+  "name" : "formativ/tutorial-cartalyst-data-grid",
+  "authors" : [
+    {
+      "name" : "Christopher Pitt",
+      "email" : "cgpitt@gmail.com"
+    }
+  ],
+  "repositories" : [
+    {
+      "type" : "composer",
+      "url" : "http://packages.cartalyst.com"
+    }
+  ],
+  "require" : {
+    "cartalyst/data-grid": "2.0.*"
+  },
+  "minimum-stability" : "dev"
+}
