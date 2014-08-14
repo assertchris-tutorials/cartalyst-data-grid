@@ -15,8 +15,8 @@ $data = [];
 foreach ($elements as $element) {
   $data[] = [
     "date"       => $element->getAttribute("date"),
-    "low"        => $element->getAttribute("low"),
-    "high"       => $element->getAttribute("high"),
+    "low"        => (integer) $element->getAttribute("low"),
+    "high"       => (integer) $element->getAttribute("high"),
     "conditions" => $element->getAttribute("text")
   ];
 }

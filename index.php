@@ -4,6 +4,30 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
 
+<div data-grid="main">
+  <button data-reset>All</button>
+  <button data-reset data-filter="conditions:Sunny">Filter Sunny</button>
+  <button data-reset data-filter="conditions:Showers">Filter Showers</button>
+  <button data-reset data-filter="low:15:20">Low 15 - 20</button>
+  <button data-reset data-filter="high:15:20">High 15 - 20</button>
+</div>
+
+<form method="post" action="" accept-charset="utf-8" data-search data-grid="main">
+  <select name="column">
+    <option value="all">All</option>
+    <option value="date">Date</option>
+    <option value="low">Low</option>
+    <option value="high">High</option>
+    <option value="conditions">Conditions</option>
+  </select>
+  <input name="filter" type="text" placeholder="Search...">
+  <button>Add Filter</button>
+</form>
+
+<a data-sort="date:asc" data-grid="main">Soonest</a>
+<a data-sort="low:asc" data-grid="main">Coldest</a>
+<a data-sort="high:desc" data-grid="main">Hottest</a>
+
 <table class="table results" data-grid="main" data-source="/weather.php">
   <thead>
     <tr>
@@ -38,10 +62,10 @@
 <script type="text/template" data-grid="main" data-template="filters">
   <% _.each(filters, function(f) { %>
     <li>
-      <% if (column === "all") { %>
+      <% if (f.column === "all") { %>
         <%= f.value %>
       <% } else { %>
-        <%= r.value %> in <%= f.column %>
+        <%= f.value %> in <%= f.column %>
       <% } %>
     </li>
   <% }); %>

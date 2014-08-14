@@ -12,21 +12,22 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:cartalyst/data-grid.git",
-                "reference": "5bb4a6931ab2e45c4e22e0e155a973b52c475542"
+                "reference": "e598af5492accb675930fb6b44a31378cd91e93a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cartalyst/data-grid/zipball/5bb4a6931ab2e45c4e22e0e155a973b52c475542",
-                "reference": "5bb4a6931ab2e45c4e22e0e155a973b52c475542",
+                "url": "https://api.github.com/repos/cartalyst/data-grid/zipball/e598af5492accb675930fb6b44a31378cd91e93a",
+                "reference": "e598af5492accb675930fb6b44a31378cd91e93a",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "~4.1",
+                "illuminate/support": ">=4.1,<4.3",
                 "php": ">=5.3.0",
                 "symfony/http-foundation": "~2.4"
             },
             "require-dev": {
-                "illuminate/database": "~4.1",
+                "cartalyst/attributes": "~1.0",
+                "illuminate/database": ">=4.1,<4.3",
                 "mockery/mockery": "~0.9",
                 "phpunit/phpunit": "~4.1"
             },
@@ -85,23 +86,24 @@
                 "search"
             ],
             "support": {
-                "source": "https://github.com/cartalyst/data-grid/tree/master",
+                "source": "https://github.com/cartalyst/data-grid/tree/2.0",
                 "issues": "https://github.com/cartalyst/data-grid/issues"
             },
-            "time": "2014-07-28 21:57:21"
+            "time": "2014-08-12 20:42:27"
         },
         {
             "name": "illuminate/support",
-            "version": "dev-master",
+            "version": "4.2.x-dev",
+            "target-dir": "Illuminate/Support",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "6fe2f4fd2250f9e5b490368734368a5189a17d74"
+                "reference": "fba264040b5ce2608316b4ebc955d9594b4f1bcd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/6fe2f4fd2250f9e5b490368734368a5189a17d74",
-                "reference": "6fe2f4fd2250f9e5b490368734368a5189a17d74",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/fba264040b5ce2608316b4ebc955d9594b4f1bcd",
+                "reference": "fba264040b5ce2608316b4ebc955d9594b4f1bcd",
                 "shasum": ""
             },
             "require": {
@@ -109,20 +111,20 @@
             },
             "require-dev": {
                 "jeremeamia/superclosure": "~1.0",
-                "patchwork/utf8": "~1.1"
+                "patchwork/utf8": "1.1.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.3-dev"
+                    "dev-master": "4.2-dev"
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Illuminate\\Support\\": ""
+                "psr-0": {
+                    "Illuminate\\Support": ""
                 },
                 "files": [
-                    "helpers.php"
+                    "Illuminate/Support/helpers.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -135,7 +137,7 @@
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "time": "2014-08-04 01:40:13"
+            "time": "2014-08-11 16:12:55"
         },
         {
             "name": "symfony/http-foundation",
